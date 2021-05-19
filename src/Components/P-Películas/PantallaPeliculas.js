@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar';
-
+import Banner from './Banner/Banner';
 
 
 
@@ -13,15 +13,7 @@ const Pantalla_Peliculas= function(){
         
             <div className='Pantalla_Peliculas'>
                 <Navbar /> 
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
+                <Banner />
 
             </div>
         
