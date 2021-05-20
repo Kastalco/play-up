@@ -13,8 +13,10 @@
 
 .banner__title{
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 600;
     padding-bottom: 3rem;
+    font-family: 'poppins';
+    
 }
 
 .banner__description{
@@ -24,6 +26,11 @@
     font-size: 1rem;
     max-width: 360px;
     height: 80px;
+    text-align: justify;
+    font-family: 'poppins';
+    font-weight: 400;
+    
+    
 }
 
 .banner--fadeBottom{
@@ -47,6 +54,10 @@
     color: #101010;
     background-color: #e6e6e6;
     transition: all 0.5s;
-    
+}
 
+.banner__buttons{
+    display: flex;
+    margin-left: 0;
+    
 }

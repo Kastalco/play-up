@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Banner.css';
+import BotonBanner from './BotonBanner/BotonBanner';
+import axios from '../../../../src/axios/axios';
+import requests from '../../../../src/Request';
 
 const Banner = function Banner() {
+
+    const [movie, setMovie] = useState([]);
+
+    useEffect(() => {
+        async function fecthData(){
+            const request = await axios.get(requests.fetchNetflixOriginals);
+            setMovie(
+                request.data.results[
+                    Math.floor(Math.random() * request.data.results.length -1)
+                ]
+            );
+            return request;
+        }
+
+        fecthData();
+    }, []);
+
+    console.log(movie)
+
+    function truncate(string, n) {
+        return string?.length > n ? string.substr(0, n-1) + '...' : string;
+    }
+
     return (
         <header className="banner" style={{
             backgroundSize:"cover",
-            backgroundImage: `url("https://wallpapercave.com/wp/wp7123665.jpg")`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundPosition:"center center",
         }}>
 
@@ -13,10 +39,10 @@ const Banner = function Banner() {
             <h1 className="banner__title">Movie Name</h1>
             
             <div className="banner__buttons">
-                <button className="banner__button">Reproducir</button>
-                <button className="banner__button">Más información</button>
+                <BotonBanner texto="Reproducir"/>
+                <BotonBanner texto="Más información"/>
             </div>
-            <h1 className="banner__description">This is a test description</h1>
+            <h1 className="banner__description"> {truncate(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ex sit, iure excepturi maxime eligendi ipsa nesciunt quasi qui? Hic consequatur ea eveniet aliquam laborum officiis minus autem quis`, 150)}</h1>
         </div>
 
         <div className="banner--fadeBottom">
