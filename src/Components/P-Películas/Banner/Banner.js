@@ -36,13 +36,15 @@ const Banner = function Banner() {
         }}>
 
         <div className="banner__contents">
-            <h1 className="banner__title">Movie Name</h1>
+            <h1 className="banner__title">
+                {movie?.title || movie?.name || movie?.original_name}
+            </h1>
             
             <div className="banner__buttons">
                 <BotonBanner texto="Reproducir"/>
                 <BotonBanner texto="Más información"/>
             </div>
-            <h1 className="banner__description"> {truncate(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem ex sit, iure excepturi maxime eligendi ipsa nesciunt quasi qui? Hic consequatur ea eveniet aliquam laborum officiis minus autem quis`, 150)}</h1>
+            <h1 className="banner__description"> {truncate( movie?.overview, 150)}</h1>
         </div>
 
         <div className="banner--fadeBottom">
