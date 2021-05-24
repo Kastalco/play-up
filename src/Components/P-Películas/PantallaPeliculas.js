@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
 import requests from '../../Request';
-import Row from './Row/Row';
+
 import Miniatura from './Miniatura/Miniatura';
 
 const Pantalla_Peliculas= function(){
@@ -15,7 +15,7 @@ const Pantalla_Peliculas= function(){
                 <Banner />
 
                 <Miniatura title="Trending Now" fetchUrl ={requests.fetchTrending} isLargeRow />
-                <Miniatura title="Top rated" fetchUrl ={requests.fetchTopRated}/>
+                <Miniatura title="Top rated" fetchUrl ={requests.fetchTopRated} />
                 <Miniatura title="Action Movies" fetchUrl ={requests.fecthActionMovies}/>
                 <Miniatura title="Comedy Movies" fetchUrl ={requests.fetchComedyMovies}/>
                 <Miniatura title="Horror Movies" fetchUrl ={requests.fetchHorrorMovies}/>

@@ -23,14 +23,18 @@ function Miniatura({ title, fetchUrl, isLargeRow= false }) {
             <div className="row">
                 <h2>{title}</h2>
 
-                {movies.map(movie => (
-                    <img 
-                    
-                    src={`${base_url}${
-                        isLargeRow ? movie.poster_path : movie.backdrop_path
+                <div className="row__posters">
+                    {movies.map(movie => (
+                        <img 
+                        className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                        key ={movie.id}
+                        src={`${base_url}${
+                            isLargeRow ? movie.poster_path : movie.backdrop_path
 
-                    }`} alt={movie.name} />
-                ))}
+                        }`} alt={movie.name} />
+                    ))}
+                </div>
+                
             </div>
         
     )
