@@ -36,7 +36,7 @@ const Banner = function Banner() {
         }}>
 
         <div className="banner__contents">
-            <h1 className="banner__title">
+            <h1 className="banner__title ">
                 {movie?.title || movie?.name || movie?.original_name}
             </h1>
             

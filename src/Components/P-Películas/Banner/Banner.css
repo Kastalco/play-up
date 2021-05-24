@@ -16,6 +16,18 @@
     font-weight: 600;
     padding-bottom: 3rem;
     font-family: 'poppins';
+    text-shadow: 1px 1px 1px #1010102a,
+        1px 2px 1px #1010102a,
+        1px 3px 1px #1010102a,
+        1px 4px 1px #1010102a,
+        1px 5px 1px #1010102a,
+        1px 6px 1px #1010102a,
+        1px 7px 1px #1010102a,
+        1px 8px 1px #1010102a,
+        1px 9px 1px #1010102a,
+        1px 10px 1px #1010102a;
+
+    
     
 }
 
@@ -47,7 +59,7 @@
     border-radius: 0.4vw;
     padding: 0.7rem 2rem;
     margin-right: 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(10, 10, 10, 0.466);
 }
 
 .banner__button:hover{

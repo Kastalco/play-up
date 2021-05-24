@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
 import requests from '../../Request';
+import './PantallaPeliculas.css';
 
 import Miniatura from './Miniatura/Miniatura';
 
