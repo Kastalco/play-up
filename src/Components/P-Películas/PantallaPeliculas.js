@@ -3,8 +3,8 @@ import Navbar from './Navbar/Navbar';
 import Banner from './Banner/Banner';
 import requests from '../../Request';
 import './PantallaPeliculas.css';
-
 import Miniatura from './Miniatura/Miniatura';
+
 
 const Pantalla_Peliculas= function(){
     
@@ -14,6 +14,7 @@ const Pantalla_Peliculas= function(){
             <div className='Pantalla_Peliculas'>
                 <Navbar /> 
                 <Banner />
+                
 
                 <Miniatura title="Trending Now" fetchUrl ={requests.fetchTrending} isLargeRow />
                 <Miniatura title="Top rated" fetchUrl ={requests.fetchTopRated} />
