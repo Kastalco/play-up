@@ -4,6 +4,8 @@ import Banner from './Banner/Banner';
 import requests from '../../Request';
 import './PantallaPeliculas.css';
 import Miniatura from './Miniatura/Miniatura';
+import Modal from './Modals/Modal';
+
 
 
 const Pantalla_Peliculas= function(){
@@ -15,7 +17,11 @@ const Pantalla_Peliculas= function(){
                 <Navbar /> 
                 <Banner />
                 
-
+                 <Modal>
+                    <h3>Modal1</h3>
+                    <p>Contenido modal 1</p>
+                    <img src="https://placeimg.com/400/400/animals" alt="Animals" />
+                </Modal>
                 <Miniatura title="Trending Now" fetchUrl ={requests.fetchTrending} isLargeRow />
                 <Miniatura title="Top rated" fetchUrl ={requests.fetchTopRated} />
                 <Miniatura title="Action Movies" fetchUrl ={requests.fecthActionMovies}/>
@@ -23,6 +29,8 @@ const Pantalla_Peliculas= function(){
                 <Miniatura title="Horror Movies" fetchUrl ={requests.fetchHorrorMovies}/>
                 <Miniatura title="Romance Movies" fetchUrl ={requests.fetchRomanceMovies}/>
                 <Miniatura title="Documentaries" fetchUrl ={requests.fetchDocumentaries}/>
+                
+
                 
 
             </div>
