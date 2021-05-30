@@ -1,10 +1,10 @@
 import './Modal.css';
 
-const Modal = ({children}) => {
+const Modal = ({children, isOpen, closeModal}) => {
     return (
-        <article className="modal is-open">
+        <article className={`modal ${isOpen && "is-open"}`}>
             <div className="modal-container">
-                <button class="modal-close"> X</button>
+                <button class="modal-close" onClick={closeModal} > X</button>
                 {children}
             </div>
         </article>

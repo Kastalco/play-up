@@ -5,11 +5,12 @@ import requests from '../../Request';
 import './PantallaPeliculas.css';
 import Miniatura from './Miniatura/Miniatura';
 import Modal from './Modals/Modal';
+import { useModal } from './Modals/useModal';
 
 
 
 const Pantalla_Peliculas= function(){
-    
+    const [isOpenModal1, openModal1, closeModal1] = useModal(false);
     return(
 
         
@@ -17,11 +18,7 @@ const Pantalla_Peliculas= function(){
                 <Navbar /> 
                 <Banner />
                 
-                 <Modal>
-                    <h3>Modal1</h3>
-                    <p>Contenido modal 1</p>
-                    <img src="https://placeimg.com/400/400/animals" alt="Animals" />
-                </Modal>
+                 
                 <Miniatura title="Trending Now" fetchUrl ={requests.fetchTrending} isLargeRow />
                 <Miniatura title="Top rated" fetchUrl ={requests.fetchTopRated} />
                 <Miniatura title="Action Movies" fetchUrl ={requests.fecthActionMovies}/>
