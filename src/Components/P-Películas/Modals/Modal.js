@@ -1,8 +1,9 @@
 import './Modal.css';
 
+
 const Modal = ({children, isOpen, closeModal}) => {
     return (
-        <article className={`modal ${isOpen && "is-open"}`}>
+        <article className={`modal ${isOpen && "is-open"}`} >
             <div className="modal-container">
                 <button class="modal-close" onClick={closeModal} > X</button>
                 {children}

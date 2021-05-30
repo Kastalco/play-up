@@ -4,13 +4,12 @@ import Banner from './Banner/Banner';
 import requests from '../../Request';
 import './PantallaPeliculas.css';
 import Miniatura from './Miniatura/Miniatura';
-import Modal from './Modals/Modal';
-import { useModal } from './Modals/useModal';
+
 
 
 
 const Pantalla_Peliculas= function(){
-    const [isOpenModal1, openModal1, closeModal1] = useModal(false);
+   
     return(
 
         

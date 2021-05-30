@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Banner.css';
-import BotonBanner from './BotonBanner/BotonBanner';
+
 import axios from '../../../../src/Axios/Axios';
 import requests from '../../../../src/Request';
 import { useModal } from '../Modals/useModal';
@@ -38,9 +38,11 @@ const Banner = function Banner() {
         }}>
             
             <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-                    <h3>Modal1</h3>
-                    <p>Contenido modal 1</p>
-                    <img src="https://placeimg.com/400/400/animals" alt="Animals" />
+                    <h1 className="banner__title__modal ">
+                        {movie?.title || movie?.name || movie?.original_name}
+                    </h1>
+                    <h1 className="banner__description__modal"> {truncate( movie?.overview, 150)}</h1>
+                    
             </Modal>
 
         <div className="banner__contents">
@@ -49,9 +51,8 @@ const Banner = function Banner() {
             </h1>
             
             <div className="banner__buttons">
-                <BotonBanner texto="Reproducir"/>
-                <BotonBanner texto="Más información"/>
-                <button onClick={openModal1}> ModalBanner</button>
+                
+                <button className="banner__button" onClick={openModal1}> Ver película</button>
             </div>
             <h1 className="banner__description"> {truncate( movie?.overview, 150)}</h1>
         </div>
