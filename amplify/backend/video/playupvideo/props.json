@@ -1,0 +1,38 @@
+{
+    "shared": {
+        "resourceName": "playupvideo"
+    },
+    "template": {
+        "name": "Amplify_Video_System_Ott_Hls_Ts_Avc_Aac.json"
+    },
+    "contentDeliveryNetwork": {
+        "enableDistribution": false
+    },
+    "parameters": {
+        "authRoleName": {
+            "Ref": "AuthRoleName"
+        },
+        "GraphQLAPIId": {
+            "Fn::GetAtt": [
+                "apiproyectoweb",
+                "Outputs.GraphQLAPIIdOutput"
+            ]
+        },
+        "GraphQLEndpoint": {
+            "Fn::GetAtt": [
+                "apiproyectoweb",
+                "Outputs.GraphQLAPIEndpointOutput"
+            ]
+        }
+    },
+    "permissions": {
+        "permissionSchema": [
+            "admin",
+            "any"
+        ]
+    },
+    "cms": {
+        "overrideSchema": false,
+        "editAPI": false
+    }
+}

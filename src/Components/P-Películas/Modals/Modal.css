@@ -1,3 +1,8 @@
+.container_form_description{
+    display: flex;
+    flex-direction: row;
+}
+
 .modal{
     position: fixed;
     z-index: 999;
@@ -13,8 +18,13 @@
 
 .modal.is-open{
     display:flex;
+    justify-content: center;
+    align-content: center;
 }
 
+.containerPlayer{
+    margin-top: 0rem;
+}
 .modal-container{
     position:relative;
     max-width: 70rem;
@@ -22,8 +32,11 @@
     min-height: 33rem;
     background-color: #181818;
     overflow-y: auto;
-    padding: 1rem;
-    
+    margin: -1rem 1rem 1rem  1rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-close{
@@ -32,4 +45,195 @@
     right: 1rem;
     cursor:pointer;
     
+}
+
+.player{
+    width: 1080;
+    margin-top:-1rem ;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container_form{
+    width: 330px;
+    background-color: rgba(48, 47, 47, 0.685);
+    border-radius: 1.2rem;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+
+.container_form header{
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    
+}
+
+.container_form .form-outer{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-outer form{
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page{
+    width: 25%;
+}
+
+.form-outer form .page .title{
+    width: 25%;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field{
+    height: 45px ;
+    width: 330px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-outer form .page .field .label{
+    position:absolute;
+    top: -30px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+form .page .field select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.form-outer form .page .field button{
+width: 100%;
+height: calc(100% + 5px);
+margin-top: -20px;
+border:none;
+background: #F7801F;
+border-radius: 5px;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+letter-spacing: uppercase;
+cursor: pointer;
+transition: 0.3 ease;
+
+}
+
+.form-outer form .page .field button:hover{
+    background: #EA6900;
+
+}
+
+.form-outer form .page .btns button{
+    margin-top: -20!important;
+}
+
+ form .page .btns button .prev{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button .next{
+    margin-left: 3px;
+    
+}
+
+.container_form .progress-bar{
+    display: flex;
+    margin: 40px 0;
+}
+
+.container_form .progress-bar .step{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.progress-bar .step p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.progress-bar .step .bullet{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #fff;
+    display: inline-block;
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+    display: none;
+}
+
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+position: absolute;
+content: '';
+bottom: 11px;
+right: -51px;
+height: 3px;
+width: 44px;
+background: #fff;
+}
+
+.progress-bar .step .bullet:after{
+    background:#EA6900;
+    transform:scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step span{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.progress-bar .step .check{
+    position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
 }
