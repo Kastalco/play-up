@@ -123,7 +123,7 @@
     height: 2.2rem;
     
     border:none;
-    background: #da6302;
+    background: #bd5501;
     border-radius: 3px;
     font-family: 'Poppins';
     color: #fff;
@@ -138,8 +138,8 @@
 
 .button1:hover{
     background: #EA6900;
-    box-shadow: inset 8rem 0 0 0 #F7801F;
-    font-weight: 400;
+    box-shadow: inset 8rem 0 0 0 #da6302;
+    
 }
 
 .button2{
@@ -161,8 +161,8 @@
 
 .button2:hover{
     background: #EA6900;
-    box-shadow: inset -8rem 0 0 0 #00af1d;
-    font-weight: 400;
+    box-shadow: inset 8rem 0 0 0 #00af1d;
+   
 }
 
 .text{
