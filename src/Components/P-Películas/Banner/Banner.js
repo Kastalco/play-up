@@ -38,10 +38,21 @@ const Banner = function Banner() {
         }}>
             
             <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-                    <h1 className="banner__title__modal ">
-                        {movie?.title || movie?.name || movie?.original_name}
-                    </h1>
-                    <h1 className="banner__description__modal"> {truncate( movie?.overview, 150)}</h1>
+                    
+
+                    <div className="text_buttons">
+                        <div className="text">
+                            <h1 className="banner__title__modal ">
+                            {movie?.title || movie?.name || movie?.original_name}
+                            </h1>
+                            <h1 className="banner__description__modal"> {truncate( movie?.overview, 160)}</h1>
+                        </div>
+
+                        <div className="buttons">
+                            <button className="button1">View free</button>
+                            <button className="button2"> Donate</button>
+                        </div>
+                    </div>
                     
             </Modal>
 
@@ -52,7 +63,7 @@ const Banner = function Banner() {
             
             <div className="banner__buttons">
                 
-                <button className="banner__button" onClick={openModal1}> Ver película</button>
+                <button className="banner__button" onClick={openModal1}> Play</button>
             </div>
             <h1 className="banner__description"> {truncate( movie?.overview, 150)}</h1>
         </div>

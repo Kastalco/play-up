@@ -22,9 +22,14 @@
     align-content: center;
 }
 
-.containerPlayer{
-    margin-top: 0rem;
+
+
+.reproductor{
+    top: 0;
+    margin: 0 0 0.5rem 0;
+    
 }
+
 .modal-container{
     position:relative;
     max-width: 70rem;
@@ -76,7 +81,7 @@ body{
 
 .container_form .form-outer{
     width: 100%;
-    overflow: hidden;
+    
 }
 
 .form-outer form{
