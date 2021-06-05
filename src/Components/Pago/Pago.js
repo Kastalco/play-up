@@ -21,6 +21,13 @@ const Pago = () => {
         })
     }
 
+    const handleFocusChange = e => {
+        setstate({
+            ...state,
+            focus : e.target.name
+        })
+    }
+    
     return(
         <div className="card">
             <div className="card-body">
@@ -29,7 +36,7 @@ const Pago = () => {
                 name={state.name}
                 expiry={state.expiry}
                 cvc={state.cvc}
-                focus={state.focus}
+                focused={state.focus}
             />
 
             <form>
@@ -40,8 +47,10 @@ const Pago = () => {
                     type="text" 
                     name="number"
                     id="number"
+                    maxLength="16"
                     className="form-control"
                     onChange={handleInputChange}
+                    onFocus={handleFocusChange}
                     />
                 </div>
 
@@ -52,8 +61,10 @@ const Pago = () => {
                     type="text" 
                     name="name"
                     id="name"
+                    maxLength="30"
                     className="form-control"
                     onChange={handleInputChange}
+                    onFocus={handleFocusChange}
                     />
                 </div>
 
@@ -61,24 +72,26 @@ const Pago = () => {
                     <div className="form-group col-md-6">
                         <label htmlFor="expiry"> Expiration data </label>
                         <input
-                        
+                        maxLength="4"
                         type="text" 
                         name="expiry"
                         id="expiry"
                         className="form-control"
                         onChange={handleInputChange}
+                        onFocus={handleFocusChange}
                         />
                     </div>
 
                     <div className="form-group col-md-6">
                         <label htmlFor="cvc"> CVC </label>
                         <input
-                        
+                        maxLength="4"
                         type="text" 
                         name="cvc"
                         id="cvc"
                         className="form-control"
                         onChange={handleInputChange}
+                        onFocus={handleFocusChange}
                         />
                     </div>
 
