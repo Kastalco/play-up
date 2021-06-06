@@ -3,7 +3,7 @@ import Cards from 'react-credit-cards';
 import '../../../node_modules/react-credit-cards/es/styles-compiled.css';
 import './Pago.css'
 import { useState }  from 'react'
-import VideoBg from './Gradient.mp4';
+import VideoBg from './BGV_Trim.mp4';
 import { Button } from 'react-bootstrap';
 
 const Pago = () => {
@@ -19,9 +19,17 @@ const Pago = () => {
     const handleInputChange = (e) => {
         setstate({
             ...state,
-            [e.target.name] : e.target.value
+            [e.target.name] : nomalizeCardNumber(e.target.value)
+            
+
         })
+
+
     }
+
+const nomalizeCardNumber = (value) => {
+    return value.replace(/\s/g, "").match(/.{1,4}/g).join(" ").substr(0,19) || ""
+}
 
     const handleFocusChange = e => {
         setstate({
@@ -63,9 +71,10 @@ const Pago = () => {
                 <div className="form-group">
                     <label htmlFor="number" className="card-number"> Card number </label>
                     <input
-                    
+                    placeholder="0000 0000 0000 0000"
                     type="text" 
                     name="number"
+                    inputMode="numeric"
                     id="number"
                     maxLength="16"
                     className="form-control input-bg"
@@ -79,7 +88,7 @@ const Pago = () => {
                     <div className="form-group col-md-6">
                         <label htmlFor="name"> Name </label>
                         <input
-                        
+                        placeholder="Dwayne Johnson"
                         type="text" 
                         name="name"
                         id="name"
@@ -91,48 +100,63 @@ const Pago = () => {
                     </div>
 
                     <div className="form-group col-md-6">
-                        <label htmlFor="name"> Email </label>
-                        <input
-                        
-                        type="email" 
-                        
-                        maxLength="30"
-                        className="form-control input-bg"
-                        
-                        
-                        />
-                    </div>
-
-                </div>
-                
-
-                         <div className="form-row">
-                            <div className="form-group col-md-6">
                                 <label htmlFor="expiry"> Expiration data </label>
                                 <input
                                 maxLength="4"
                                 type="number" 
                                 name="expiry"
                                 id="expiry"
+                                placeholder="MM-YY"
                                 className="form-control input-bg"
                                 onChange={handleInputChange}
                                 onFocus={handleFocusChange}
                                 />
+                     </div>
+
+                    </div>
+                
+
+                         <div className="form-row">
+
+                            <div className="form-group col-md-6">
+                                    <label htmlFor="cvc"> CVC </label>
+                                    <input
+                                    maxLength="4"
+                                    type="number" 
+                                    name="cvc"
+                                    id="cvc"
+                                    placeholder="0000"
+                                    className="form-control input-bg"
+                                    onChange={handleInputChange}
+                                    onFocus={handleFocusChange}
+                                    />
                             </div>
 
                             <div className="form-group col-md-6">
-                                <label htmlFor="cvc"> CVC </label>
+                                <label htmlFor="name"> Email </label>
                                 <input
-                                maxLength="4"
-                                type="number" 
-                                name="cvc"
-                                id="cvc"
+                                type="email" 
+                                maxLength="30"
                                 className="form-control input-bg"
-                                onChange={handleInputChange}
-                                onFocus={handleFocusChange}
+                                placeholder="example@gmail.com"
                                 />
                             </div>
 
+                        </div>
+
+
+                        <div className="form-group">
+                            <label htmlFor="number" className="amount"> Amount of donation (USD) </label>
+                            <input
+                            placeholder="5 USD"
+                            type="text" 
+                            name="number"
+                            inputMode="numeric"
+                            id="number"
+                            maxLength="16"
+                            className="form-control input-bg"
+                           
+                            />
                         </div>
 
                         <div className="form-row">
@@ -144,10 +168,12 @@ const Pago = () => {
                             <div className="form-group col-md-6">
                                  <Button variant="warning" block>Cancel</Button>{' '}
                             </div>
-
+                    
                         </div>
 
                         <Button type="submit" variant="success" block>Donate</Button>{' '}
+
+                        
 
                     </form>
 
