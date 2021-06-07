@@ -5,6 +5,7 @@ import './Pago.css'
 import { useState }  from 'react'
 import VideoBg from './BGV_Trim.mp4';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Pago = () => {
 
@@ -165,13 +166,18 @@ const nomalizeCardNumber = (value) => {
                               <Button type="reset"variant="primary" block >Reset</Button>{' '}
                             </div>
 
-                            <div className="form-group col-md-6">
-                                 <Button variant="warning" block>Cancel</Button>{' '}
-                            </div>
+                            <Link to="/" className="form-group col-md-6 btn btn-warning">
+                                Cancel
+                            </Link>
+                            
+                           
                     
                         </div>
 
-                        <Button type="submit" variant="success" block>Donate</Button>{' '}
+                        <Link to="/movie">
+                            <Button type="submit" variant="success" block>Donate</Button>{' '}
+                        </Link>
+                        
 
                         
 

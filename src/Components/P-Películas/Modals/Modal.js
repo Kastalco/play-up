@@ -14,7 +14,7 @@ const Modal = ({children, isOpen, closeModal}) => {
             <div className="modal-container">
                 <button class="modal-close" onClick={closeModal} > X</button>
                 <div className="containerPlayer">
-                <ReactPlayer width='980px' height='552px' className="reproductor" controls url="https://www.youtube.com/watch?v=sOtsmM9KCnw" />
+                <ReactPlayer width='980px' height='552px' className="reproductor" controls url="https://www.youtube.com/watch?v=iy1eqIKNoBk" />
                 </div>
                 
                 

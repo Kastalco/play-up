@@ -8,6 +8,7 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
+import MoviePlay from './Components/MoviePlay/MoviePlay';
 
 
 
@@ -24,6 +25,10 @@ function App() {
 
           <Route exact path="/donation">
             <Pago />
+          </Route>
+
+          <Route exact path="/movie">
+            <MoviePlay />
           </Route>
       
 

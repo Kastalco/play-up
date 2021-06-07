@@ -37,7 +37,7 @@
  font-weight: 300;
 }
 
-.form-group:{
+.form-group{
     font-family: 'Poppins';
     color: white;
     
@@ -46,3 +46,12 @@
 *::-ms-input-placeholder{
     color:white;
 }
+
+.btn{
+    color: white;
+}
+
+.btn:hover{
+    color: white;
+}
+

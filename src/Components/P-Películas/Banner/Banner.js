@@ -6,7 +6,7 @@ import requests from '../../../../src/Request';
 import { useModal } from '../Modals/useModal';
 import Modal from '../Modals/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDonate, faFrown, faHeart, faHeartBroken, faSmile } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = function Banner() {
     const [isOpenModal1, openModal1, closeModal1] = useModal(false);
@@ -53,11 +53,12 @@ const Banner = function Banner() {
                        
                         <div className="payment">
                             
-                            <div className="watch-mode">
-                                <h1> Watch Mode</h1>
-                            </div>
+                           
+                                
+                            
 
                             <div className="buttons form-group ">
+                                <h1 className="watch-mode-text"> Watch Mode</h1>
                                 <Link to="/" class="btn btn-danger">Free
                                 
                                     <FontAwesomeIcon className="font-iconfaHeart" icon={faHeartBroken} />

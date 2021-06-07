@@ -48,7 +48,7 @@
         1px 10px 1px #1010102a;
         margin-top: 1rem;
         text-align: left;
-        color: #F7801F
+        color: #fff
 }
 
 .banner__description{
@@ -179,3 +179,14 @@ margin: 0rem 6rem;
     
 }
 
+
+
+.watch-mode-text{
+    font-size: 1.8rem;
+    font-weight: 450;
+    padding-bottom: 0rem;
+    font-family: 'poppins';
+    text-align: center;
+    margin-top: 1rem;
+    color: #F7801F;
+}
