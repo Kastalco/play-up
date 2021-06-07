@@ -48,6 +48,7 @@
         1px 10px 1px #1010102a;
         margin-top: 1rem;
         text-align: left;
+        color: #F7801F
 }
 
 .banner__description{
@@ -168,3 +169,13 @@
 .text{
 margin: 0rem 6rem;
 }
+
+.btn-danger{
+    margin: 0.8rem 0 ;
+}
+
+.font-iconfaHeart{
+    margin-left: 0.5rem;
+    
+}
+

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Banner.css';
-
+import { Link } from 'react-router-dom';
 import axios from '../../../../src/Axios/Axios';
 import requests from '../../../../src/Request';
 import { useModal } from '../Modals/useModal';
 import Modal from '../Modals/Modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDonate, faFrown, faHeart, faHeartBroken, faSmile } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = function Banner() {
     const [isOpenModal1, openModal1, closeModal1] = useModal(false);
@@ -48,10 +50,33 @@ const Banner = function Banner() {
                             <h1 className="banner__description__modal"> {truncate( movie?.overview, 160)}</h1>
                         </div>
 
-                        <div className="buttons">
-                            <button className="button1">View free</button>
-                            <button className="button2"> Donate</button>
+                       
+                        <div className="payment">
+                            
+                            <div className="watch-mode">
+                                <h1> Watch Mode</h1>
+                            </div>
+
+                            <div className="buttons form-group ">
+                                <Link to="/" class="btn btn-danger">Free
+                                
+                                    <FontAwesomeIcon className="font-iconfaHeart" icon={faHeartBroken} />
+                                
+                                </Link>
+
+
+                                <Link to="/donation" class="btn btn-success"> 
+                                
+                                    Donate
+                                    <FontAwesomeIcon className="font-iconfaHeart" icon={faHeart} />
+                                </Link>
+
+                                
+                            </div>
+
                         </div>
+                       
+                        
                     </div>
                     
             </Modal>
