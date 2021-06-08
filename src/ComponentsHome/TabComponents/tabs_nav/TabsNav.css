@@ -1,0 +1,52 @@
+/*Tab Nav #1 */
+.tab-icon-door{
+    width: 5rem;
+    height: 5rem;
+    fill: #fff;
+}
+
+
+
+/*Tab Nav #2 */
+.icon-price-tag{
+    width: 5rem;
+    height: 5rem;
+    fill: #fff;
+}
+/*Tabs*/
+.tabs{
+    padding-top: 1rem;
+}
+
+.tab-nav-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:1rem;
+    list-style: none;
+    margin:0;
+}
+
+/*Tabs Nav Hover Effect */
+ul li:hover{
+    color:#f7801f;
+    cursor:pointer;
+}
+
+ul li:hover svg path{
+    fill:#f7801f;
+}
+
+/*The active tab*/
+.active {
+    border-bottom: 4px solid #f7801f;
+} 
+.tab-selected{
+    color: #fff;
+}
+
+.tab-selected svg path{
+    fill: #fff;
+} 

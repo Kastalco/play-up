@@ -43,8 +43,7 @@ const Banner = function Banner() {
             backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundPosition:"center center",
         }}>
-            <br />
-            <br />
+            
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>

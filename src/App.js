@@ -9,6 +9,7 @@ import {
   
 } from "react-router-dom";
 import MoviePlay from './Components/MoviePlay/MoviePlay';
+import Main from './ComponentsHome/pages/index';
 
 
 
@@ -19,6 +20,9 @@ function App() {
       
       <Router>
         <Switch>
+
+          <Route path="/home" component ={Main}/>
+
           <Route exact path="/">
             <PantallaPeliculas />
           </Route>
@@ -31,6 +35,7 @@ function App() {
             <MoviePlay />
           </Route>
       
+          
 
         </Switch>
       </Router>
