@@ -1,7 +1,38 @@
-.app{
-    background-color: #101010;
-    height: 100%;
-    width: 100%;
-    
+:root{
+  --main-orange: rgba(247,128,31,1);
+  --main-dark: rgba(20,20,20);
+  --main-deep-dark: rgba(0,0,0,0);
+  --main-grey : #ffa023;
+}
 
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+  background: var(--main-dark);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+.header-container{
+  width: 100vw;
+  height: 100vh;
+  position:relative;
+  background: url(./ComponentsHome/images/bg.jpg) ;
+}
+
+.header-container::after{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background: #0e0e0e8a;
 }

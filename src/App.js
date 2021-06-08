@@ -1,41 +1,15 @@
 import React from 'react';
 import './App.css';
-import PantallaPeliculas from './Components/P-Películas/PantallaPeliculas';
-import Pago from './Components/Pago/Pago';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink
-} from "react-router-dom";
-import MoviePlay from './Components/MoviePlay/MoviePlay';
-
-
+import {Switch, Route } from 'react-router-dom'
+import Main from "./ComponentsHome/pages/index"
 
 function App() {
+
   return (
-    <div className="App">
-      
-      
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <PantallaPeliculas />
-          </Route>
-
-          <Route exact path="/donation">
-            <Pago />
-          </Route>
-
-          <Route exact path="/movie">
-            <MoviePlay />
-          </Route>
-      
-
-        </Switch>
-      </Router>
-
-    </div>
+    
+   <Switch>
+     <Route path="/" component ={Main}/>
+   </Switch>
   );
 }
 
