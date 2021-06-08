@@ -80,6 +80,7 @@
 .banner--fadeBottom{
     height: 7.4rem;
     background-image: linear-gradient( 180deg, transparent, rgba(37,37,37, 0.61), #111);
+    margin-top: 11.9rem;
 }
 
 .banner__button{
@@ -149,5 +150,5 @@ margin: 0rem 6rem;
 }
 
 .font-iconfaPlay{
-    margin-right: 1rem;
+    margin-right: 0.8rem;
 }

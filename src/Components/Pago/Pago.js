@@ -20,7 +20,7 @@ const Pago = () => {
     const handleInputChange = (e) => {
         setstate({
             ...state,
-            [e.target.name] : nomalizeCardNumber(e.target.value)
+            [e.target.name] : e.target.value
             
 
         })
