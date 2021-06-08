@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './Navbar.css';
 import logoPlay from "../Navbar/play_logo.png";
-import profilePic from '../Navbar/Profile men.png';
+
 
 const Navbar= function(){
 

@@ -1,6 +1,5 @@
 import './Modal.css';
 import ReactPlayer from 'react-player';
-import FormPago from './FormPago/FormPago';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +15,7 @@ const Modal = ({children, isOpen, closeModal}) => {
             <div className="modal-container">
                 <button class="modal-close" onClick={closeModal}>
                     <i>
-                    <FontAwesomeIcon className="font-iconfaHeart" icon={faTimesCircle} />
+                        <FontAwesomeIcon className="font-iconfaHeart" icon={faTimesCircle} />
                     </i>
                 </button>
                 <div className="containerPlayer">

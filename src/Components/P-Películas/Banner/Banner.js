@@ -4,13 +4,18 @@ import { Link } from 'react-router-dom';
 import axios from '../../../../src/Axios/Axios';
 import requests from '../../../../src/Request';
 import { useModal } from '../Modals/useModal';
-import Modal from '../Modals/Modal';
+import Modall from '../Modals/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faHeartBroken, faPlay } from '@fortawesome/free-solid-svg-icons';
+import {Button, Modal} from 'react-bootstrap';
 
 const Banner = function Banner() {
     const [isOpenModal1, openModal1, closeModal1] = useModal(false);
     const [movie, setMovie] = useState([]);
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
     useEffect(() => {
         async function fecthData(){
@@ -38,8 +43,27 @@ const Banner = function Banner() {
             backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundPosition:"center center",
         }}>
-            
-            <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
+            <br />
+            <br />
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Close
+                </Button>
+                <Button variant="primary" onClick={handleClose}>
+                    Save Changes
+                </Button>
+                </Modal.Footer>
+            </Modal>
+            <Button variant="primary" onClick={handleShow}>
+                Launch static backdrop modal
+            </Button>
+
+            <Modall isOpen={isOpenModal1} closeModal={closeModal1}>
                     
 
                     <div className="text_buttons">
@@ -80,7 +104,7 @@ const Banner = function Banner() {
                         
                     </div>
                     
-            </Modal>
+            </Modall>
 
         <div className="banner__contents">
             <h1 className="banner__title ">

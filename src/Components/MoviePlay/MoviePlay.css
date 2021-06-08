@@ -6,3 +6,26 @@ body{
     transform: scale(0.9);
     margin: 0;
 }
+
+.btnBack{
+    color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+    margin-top: 2.5rem;
+    transform: scale(1.5);
+    margin-left: 1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 1;
+}
+
+.btnBack:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.8);
+}
+
+.modal{
+    z-index: 2;
+}
