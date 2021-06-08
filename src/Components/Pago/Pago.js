@@ -123,7 +123,7 @@ const nomalizeCardNumber = (value) => {
                                     <label htmlFor="cvc"> CVC </label>
                                     <input
                                     maxLength="4"
-                                    type="number" 
+                                    type="text" 
                                     name="cvc"
                                     id="cvc"
                                     placeholder="0000"
