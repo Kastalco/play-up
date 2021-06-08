@@ -29,7 +29,7 @@ const Navbar= function(){
                 
                 <div className="nav__contents">
                     <img src={logoPlay} alt="Home" className="nav__logo"></img>
-                    <img src={profilePic} alt="Profile" className="nav__avatar" ></img>
+                    
                     
                 </div>
                 

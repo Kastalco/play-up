@@ -6,7 +6,7 @@ import requests from '../../../../src/Request';
 import { useModal } from '../Modals/useModal';
 import Modal from '../Modals/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faHeartBroken, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = function Banner() {
     const [isOpenModal1, openModal1, closeModal1] = useModal(false);
@@ -59,7 +59,7 @@ const Banner = function Banner() {
 
                             <div className="buttons form-group ">
                                 <h1 className="watch-mode-text"> Watch Mode</h1>
-                                <Link to="/" class="btn btn-danger">Free
+                                <Link to="/movie" class="btn btn-danger">Free
                                 
                                     <FontAwesomeIcon className="font-iconfaHeart" icon={faHeartBroken} />
                                 
@@ -89,7 +89,9 @@ const Banner = function Banner() {
             
             <div className="banner__buttons">
                 
-                <button className="banner__button" onClick={openModal1}> Play</button>
+                <button className="banner__button" onClick={openModal1}>
+                    <FontAwesomeIcon className="font-iconfaPlay" icon={faPlay} />
+                     Play</button>
             </div>
             <h1 className="banner__description"> {truncate( movie?.overview, 150)}</h1>
         </div>

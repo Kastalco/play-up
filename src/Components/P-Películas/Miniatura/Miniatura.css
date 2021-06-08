@@ -1,7 +1,10 @@
 .row{
     color: white;
-    margin-left: 2.1rem;
+    margin-left: 2rem;
+}
 
+.titulo{
+    font-size: 1.3rem;
 }
 
 .row__posters{

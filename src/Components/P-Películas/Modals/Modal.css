@@ -49,9 +49,25 @@
     top: 1rem;
     right: 1rem;
     cursor:pointer;
-    
+    border: none;
+    outline: none;
+    background: none;
+    margin-top: 2rem;
     
 }
+
+.font-iconfaHeart{
+    color: rgb(214, 211, 211);
+    transition: ease-out 0.3s;
+    transform: scale(1.6);
+}
+
+.font-iconfaHeart:hover{
+    color: #fff;
+    transform: scale(1.8);
+
+}
+
 
 .player{
     width: 1080;
@@ -243,3 +259,4 @@ background: #fff;
   transform: translate(-50%, -50%);
   display: none;
 }
+
