@@ -35,3 +35,6 @@
     max-height:250px;
 }
 
+.row__poster{
+    cursor: pointer;
+}
