@@ -58,9 +58,7 @@ const Banner = function Banner() {
                 </Button>
                 </Modal.Footer>
             </Modal>
-            <Button variant="primary" onClick={handleShow}>
-                Launch static backdrop modal
-            </Button>
+            
 
             <Modall isOpen={isOpenModal1} closeModal={closeModal1}>
                     

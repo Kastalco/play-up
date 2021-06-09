@@ -21,9 +21,9 @@ function App() {
       <Router>
         <Switch>
 
-          <Route path="/home" component ={Main}/>
+          <Route exact path="/begin" component ={Main}/>
 
-          <Route exact path="/">
+          <Route exact path="/movies">
             <PantallaPeliculas />
           </Route>
 

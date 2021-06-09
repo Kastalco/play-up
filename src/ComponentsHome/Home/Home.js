@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import {Icon} from 'react-icons-kit'
 import {ic_chevron_right} from 'react-icons-kit/md/ic_chevron_right'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 
  class Home extends Component {
     render() {
@@ -13,9 +15,9 @@ import {ic_chevron_right} from 'react-icons-kit/md/ic_chevron_right'
                <div className="header-content">
                    <Title>LAS MEJORES PELÍCULAS Y DOCUMENTALES</Title>
                    <SubTitle>Disfruta todo lo que quieras, el precio lo pones tú</SubTitle>
-                   <Link className="main-offer-btn"> 
-                   Comenzar
-                   <Icon className="Icon svg"icon={ic_chevron_right} size={37}/>
+                   <Link to="/movies" className="main-offer-btn"> 
+                   Comenzar  
+                   
                    </Link>
                </div>
            </HeaderComponent>
@@ -33,16 +35,29 @@ padding-bottom: 15rem;
 //Main Title
 const Title = styled.h1`
 margin: 0 0 1.8rem;
-font-family:Roboto;
-font-size:50px;
+font-family:Poppins;
+font-size:2.5rem;
 fot-weight:900;
+text-shadow: 1px 1px 1px #1010102a,
+1px 2px 1px #1010102a,
+1px 3px 1px #1010102a,
+1px 4px 1px #1010102a,
+1px 5px 1px #1010102a,
+1px 6px 1px #1010102a,
+1px 7px 1px #1010102a,
+1px 8px 1px #1010102a,
+1px 9px 1px #1010102a,
+1px 10px 1px #1010102a;
+
+
+}
 `;
 
 //SubTitle
 const SubTitle = styled.h2`
 font-weight:400;
 font-size: 1rem;
-font-family:Roboto;
+font-family:Poppins;
 line-height: 1.25em;
 margin: 0 0 1.875rem;
 text-transform: uppercase;
@@ -75,9 +90,11 @@ const HeaderComponent =styled.div`
     margin 0 35%;
     padding: 0.7rem;
     border-radius: 0.4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    transition: all 0.3s;
+    width: 15rem;
     
     cursor: pointer;
     &:hover{

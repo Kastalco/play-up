@@ -163,7 +163,7 @@ const Pago = () => {
                               <Button type="reset"variant="primary" block >Reset</Button>{' '}
                             </div>
 
-                            <Link to="/" className="form-group col-md-6 btn btn-warning">
+                            <Link to="/movies" className="form-group col-md-6 btn btn-warning">
                                 Cancel
                             </Link>
                             
