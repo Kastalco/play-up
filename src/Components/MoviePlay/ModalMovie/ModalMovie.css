@@ -1,0 +1,131 @@
+.container_form_description{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal{
+    position: fixed;
+    z-index: 999;
+    top:0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-open{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.headerModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    top: 0;
+}
+
+.font-iconExclamationCircle{
+    margin-left: 1rem;
+    transform: scale(2);
+    color: #F7801F
+}
+
+.token-info{
+    display: flex;
+    
+}
+
+
+.token-text{
+    font-family: 'Poppins';
+    font-weight: 300;
+    margin-right: 0.6rem;
+    
+}
+
+.token-value{
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: #F7801F;
+}
+
+.buttons-container{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.buttonModal{
+    margin: 1rem;
+    height: 2.7rem;
+    padding: 0 1.2rem;
+    border-radius: 6px;
+    color: white;
+    background: rgb(202, 165, 0);
+    transition: ease-in-out 0.3s;
+    
+}
+
+.buttonModal:hover{
+    font-weight: 600;
+    background: rgb(175, 144, 3);
+}
+
+.buttonModal2{
+    margin: 1rem;
+    height: 2.7rem;
+    padding: 0 1.2rem;
+    border-radius: 6px;
+    color: white;
+    background: rgb(3, 189, 3);
+    transition: ease-in-out 0.3s;
+    
+}
+
+.buttonModal2:hover{
+    font-weight: 600;
+    background: rgb(1, 151, 1);
+}
+
+.btn-modall{
+    margin: 0 2rem;
+}
+
+
+
+
+.modal-containerM{
+    position:relative;
+    max-width: 30rem;
+    min-width: 45rem;
+    min-height: 20rem;
+    background-color: #181818;
+    overflow-y: auto;
+    margin: -1rem 1rem 1rem  1rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+}
+
+.modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    background: none;
+    margin-top: 2rem;
+    
+}
+
+h1{
+    font-weight: 600;
+}

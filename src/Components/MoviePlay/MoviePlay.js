@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
 import { useState }  from 'react'
+import { useModal } from '../P-Películas/Modals/useModal';
+import ModalMovie from './ModalMovie/ModalMovie';
 
 
 
@@ -15,24 +17,17 @@ function MoviePlay() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [isOpenModal1, openModal1, closeModal1] = useModal(false);
     
     return (
         <div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Save Changes
-                </Button>
-                </Modal.Footer>
-            </Modal>
-            <button className="btnBack" onClick={handleShow}>
+            
+            <ModalMovie isOpen={isOpenModal1} closeModal={closeModal1}>
+
+
+            </ModalMovie>
+
+            <button className="btnBack" onClick={openModal1}>
                 <i>
                      <FontAwesomeIcon className="font-iconfaChevronLeft" icon={faChevronLeft}/>
                 </i>
@@ -43,7 +38,7 @@ function MoviePlay() {
             
             
             
-            <video width="1280"  controls  >
+            <video width="1280"  controls  autoPlay>
                     <source src={Movie} type="video/mp4"/>
             </video>
             
